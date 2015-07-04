@@ -68,6 +68,11 @@ ul.navbar-nav > li:first-child {
 	padding-bottom: 5px;
 }
 
-
+/* ------------------------------------- /
+/   carousel image
+/* ------------------------------------- */
+.carousel-inner video {
+	width: 100%
+}
 
 

@@ -13,6 +13,8 @@
     <script src="./js/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!-- main.jsの読み込み -->
+    <script type="text/javascript" src="./js/main.js"></script>
 </head>
 <body>
     <!-- header -->
@@ -74,25 +76,37 @@
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
+
             <div class="item active">
-                <video autoplay>
-                    <source src="./assets/webm/movie1.webm" type="video/webm">
+                <video autoplay loop>
+                    <source src="./assets/webm/movie2.webm" type="video/webm">
                     Your browser does not support the video tag.
                 </video> 
                <div class="carousel-caption">
                     ...
                 </div>
             </div>
-            <div class="item">
-                <video autoplay>
-                    <source src="./assets/webm/movie2.webm" type="video/webm">
+
+            <div class="item" id="myCarousel">
+                <video autoplay loop>
+                    <source src="./assets/webm/movie1.webm" type="video/webm">
                     Your browser does not support the video tag.
-                </video> 
+                </video>
                 <div class="carousel-caption">
                     ...
                 </div>
             </div>
             ...
+
+            <div class="item">
+                <video autoplay loop>
+                    <source src="./assets/webm/movie3.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="carousel-caption">
+                    ...
+                </div>
+            </div>
         </div>
 
         <!-- Controls -->
