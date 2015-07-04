@@ -1,0 +1,73 @@
+/* ------------------------------------- /
+/   Header
+/* ------------------------------------- */
+#header {
+	padding-top: 20px;
+	background-color: #eee;
+}
+
+/* ------------------------------------- /
+/   logo outside
+/* ------------------------------------- */
+.logo {
+	text-align: center;
+	width: 100px;
+	margin: auto auto 20px auto;
+}
+
+/* ------------------------------------- /
+/   logo text
+/* ------------------------------------- */
+.logo h1 {
+	background-color: white;
+	-webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	padding-top: 37px;
+	font-size: 26px;
+	color: #7E7E7E;
+}
+
+/* ------------------------------------- /
+/   navbar
+/* ------------------------------------- */
+.navbar {
+	border-radius: 0;
+}
+
+/* ------------------------------------- /
+/   navbar menus
+/* ------------------------------------- */
+.navbar-nav {
+	float: none;
+	width: 400px;
+	margin: 10px auto;
+}
+
+/* ------------------------------------- /
+/   navbar manu
+/* ------------------------------------- */
+ul.navbar-nav > li {
+	text-align: center;
+	float: left;
+	width: 80px;
+	border-right: 1px solid #555;
+}
+
+ul.navbar-nav > li:first-child {
+	border-left: 1px solid #555;
+}
+
+/* ------------------------------------- /
+/   navbar manu
+/* ------------------------------------- */
+.navbar-nav > li > a {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+
+
+
