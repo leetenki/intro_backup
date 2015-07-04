@@ -1,4 +1,14 @@
 /* ------------------------------------- /
+/   Cancel user select
+/* ------------------------------------- */
+* {
+	user-select:none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+}
+
+/* ------------------------------------- /
 /   Header
 /* ------------------------------------- */
 #header {
@@ -28,6 +38,10 @@
 	padding-top: 37px;
 	font-size: 26px;
 	color: #7E7E7E;
+}
+.logo h1 img {
+	width: 100px;
+	border-radius: 50%;
 }
 
 /* ------------------------------------- /
@@ -137,18 +151,17 @@
 /* ------------------------------------- /
 /   carousel image
 /* ------------------------------------- */
-/*
 .carousel-inner video {
 	width: 100%;
 }
-*/
+/*
 .carousel-inner video {
 	width: 70%;
 }
 .item {
 	text-align: center;
 }	
-
+*/
 
 
 /* ------------------------------------- /
@@ -280,14 +293,17 @@
 /*  nav
 /*--------------------------------- */
 #footer .navbar-nav > li {
-    border-right: 1px solid #000;
+    border-right: 1px solid #ccc;
 }
 #footer .navbar-nav > li.first{
-    border-left: 1px solid #000;
+    border-left: 1px solid #ccc;
 }
 
 #footer .navbar-nav li a{
     color: #fff;
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
 }
 
 /* --------------------------------- /

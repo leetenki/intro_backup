@@ -7,6 +7,7 @@
     <title>Portfolio of Tenki.Lee</title>
     <!-- BootstrapのCSS読み込み -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css"/>
     <!-- DefaultのCSSの読み込み -->
     <link rel="stylesheet" type="text/css" href="./css/default.css">
     <!-- jQuery読み込み -->
@@ -43,19 +44,19 @@
                 <div class="collapse navbar-collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="#content">Profile</a>
+                            <a type="button" data-toggle="model" data-target="#exampleModal" data-whatever="@lee">MENU1</a>
                         </li>
                         <li>
-                            <a href="#">Introduction</a>
+                            <a href="#">MENU2</a>
                         </li>
                         <li>
-                            <a href="#">Portfolio</a>
+                            <a href="#">MENU3</a>
                         </li>
                         <li>
-                            <a href="#">Contact</a>
+                            <a href="#">MENU4</a>
                         </li>
                         <li>
-                            <a href="#">SNS</a>
+                            <a href="#">MENU5</a>
                         </li>
                     </ul>
                 </div>
@@ -126,10 +127,10 @@
             <!-- text box -->
             <div class="row">
                 <div class="text-box col-sm-6">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, libero, quaerat, doloremque pariatur amet minima nihil enim temporibus doloribus dolorem neque sit quo id voluptas voluptate praesentium magnam? Unde, provident.sunt esse dolores dolorum deleniti asperiores commodi beatae ad veritatis voluptates dignissimos. Possimus!sunt esse dolores dolorum deleniti asperiores commodi beatae ad veritatis voluptates dignissimos. Possimus! 
+                　初めまして、東京都八王子市在住のTenki Leeと申します。都内の大学でコンピュータサイエンスを専攻しています。2016年4月から株式会社DeNAに入社する事になったので、技術者の最前線で活躍できるよう日々スキルを磨いています。最近のマイブームは機械学習です。今月から人工知能フレームワークのPython Caffeをはじめました。Deep Learning勉強中です。機械学習を使ってDeep LearningやらComputer Vision関連のアプリ作れないか模索中です。
                 </div>
                 <div class="text-box col-sm-6">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, iste, nesciunt, sapiente incidunt consequatur placeat voluptate sequi sunt esse dolores dolorum deleniti asperiores commodi beatae ad veritatis voluptates dignissimos. Possimus!sunt esse dolores dolorum deleniti asperiores commodi beatae ad veritatis voluptates dignissimos. Possimus!sunt esse dolores dolorum deleniti asperiores commodi beatae ad veritatis voluptates dignissimos. Possimus!
+                来年からはDeNAでRuby on Railsを使って開発するらしいので予習も兼ねて色々勉強しています。Tech Achademyに参加した理由は、今まで独学が多かったので、たまにはちゃんとしたカリキュラムを受けてみようと思ったからです。一応過去にjavascriptやらPHPをちょくちょく書いていたので、今のところ特に難しいところはないです。bootstrapが中々面白くてハマってます。この調子で楽しんでいこうと思います。
                 </div>
             </div>
 
@@ -158,8 +159,8 @@
 
         <!-- button -->
         <div class="button-box">
-            <p>CATCH TITLE</p>
-            <button type="button" class="btn btn-default">Button</button>
+            <p>Leave a message</p>
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Leave a message</button>
         </div>
     </div>
 
@@ -193,10 +194,10 @@
         <!-- sns icons -->
         <ul class="sns-icon list-inline">
             <li>
-                <i class="fa fa-twitter fa-2x"></i>
+                <i class="fa fa-twitter fa-5x"></i>
             </li>
             <li>
-                <i class="fa fa-facebook fa-2x"></i>
+                <i class="fa fa-facebook fa-5x"></i>
             </li>
         </ul>
 
@@ -205,5 +206,36 @@
             <span>Copyright &#169; 2015 leetenki.github.io All Rights Reserved.</span>
         </div>
     </div>
+
+    <!--*************************** Email form ***************************-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label">Recipient:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="control-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="submit">Send message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
