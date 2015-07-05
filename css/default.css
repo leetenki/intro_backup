@@ -8,7 +8,7 @@
 	-khtml-user-select: none;
 }
 
-a, a:visited {
+a, a:active, a:link, a:visited {
 	text-decoration: none;
     color: #373737;
 }
