@@ -331,10 +331,11 @@
     color: #ccc;
 }
 
+/*
 @media(max-width: 768px) {
 	.modal-footer button.btn {
 		text-align: center;
 		margin-top: 30px;
 		width: 100px;
 	}
-}
+}*/

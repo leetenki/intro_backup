@@ -7,14 +7,15 @@ window.onload = function() {
 	    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
 	    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
 	    var modal = $(this)
-	    modal.find('.modal-title').text('New message to ' + recipient)
-	    modal.find('.modal-body input').val(recipient)
+	    // modal.find('.modal-title').text('New message to ' + recipient)
+	    // modal.find('.modal-body input').val(recipient)
 	});
 
 	// event processor
 	$('button#submit').click(function(e){
-		console.log($("#recipient-name")[0].value);
-		console.log($("#message-text")[0].value);
+		var email = $("#email-text")[0].value;
+		var message = $("#message-text")[0].value;
+		alert(email + "," + message);
 		$('#exampleModal').modal('hide');
 	});
 
@@ -81,7 +82,7 @@ window.onload = function() {
 
 	// called when finish to slide video
 	$('#carousel-example-generic').on("slid.bs.carousel", function(e){
-//		currentItem.children[0].pause();
+		currentItem.children[0].pause();
 	});
 }
 var debug
