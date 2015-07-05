@@ -81,7 +81,7 @@ window.onload = function() {
 
 	// called when finish to slide video
 	$('#carousel-example-generic').on("slid.bs.carousel", function(e){
-		currentItem.children[0].pause();
+//		currentItem.children[0].pause();
 	});
 }
 var debug
