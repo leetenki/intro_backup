@@ -1,6 +1,32 @@
 window.onload = function() {
 
-	/******************* process email ******************/
+
+
+
+	/**********************************************/
+	//                Smooth scroll
+	/**********************************************/
+	$(function(){
+	    // #で始まるアンカーをクリックした場合に処理
+	    $('ul.navbar-nav li a[href^=#]').click(function() {
+	        // スクロールの速度
+	        var speed = 400; // ミリ秒
+	        // アンカーの値取得
+	        var href= $(this).attr("href");
+	        // 移動先を取得
+	        var target = $(href == "#" || href == "" ? 'html' : href);
+	        // 移動先を数値で取得
+	        var position = target.offset().top;
+	        // スムーススクロール
+	        $('body,html').animate({scrollTop:position}, speed, 'swing');
+	        return false;
+	    });
+	});	
+
+
+	/**********************************************/
+	//                Modal window
+	/**********************************************/
 	$('#exampleModal').on('show.bs.modal', function (event) {
 	    var button = $(event.relatedTarget) // Button that triggered the modal
 	    var recipient = button.data('whatever') // Extract info from data-* attributes
@@ -20,7 +46,9 @@ window.onload = function() {
 	});
 
 
-	/******************* process video ******************/
+	/**********************************************/
+	//                process video 
+	/**********************************************/
 	// turn of all videos
 	videos = document.getElementsByTagName("video");
 	for(var i = 1; i < videos.length; i++) {
@@ -32,8 +60,8 @@ window.onload = function() {
 	var nextItem;
 
 	// this function is called when a slide is starting to move.
-	$('#carousel-example-generic').on("slide.bs.carousel", function(e){
-		currentItem = $('#carousel-example-generic .carousel-inner .item.active')[0];
+	$('#carousel-generic').on("slide.bs.carousel", function(e){
+		currentItem = $('#carousel-generic .carousel-inner .item.active')[0];
 		nextItem = e.relatedTarget;
 
 		// play next video
@@ -81,7 +109,7 @@ window.onload = function() {
 	});
 
 	// called when finish to slide video
-	$('#carousel-example-generic').on("slid.bs.carousel", function(e){
+	$('#carousel-generic').on("slid.bs.carousel", function(e){
 		currentItem.children[0].pause();
 	});
 }

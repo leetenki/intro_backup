@@ -1,11 +1,20 @@
 /* ------------------------------------- /
 /   Cancel user select
 /* ------------------------------------- */
-#header, #carousel-example-generic, #content, #footer {
+#header, #carousel-generic, #content, #footer {
 	user-select:none;
 	-moz-user-select: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
+}
+
+a:visited {
+	text-decoration: none;
+    color: #373737;
+}
+a:hover {
+	text-decoration: none;
+    color: #fff;	
 }
 
 /* ------------------------------------- /
@@ -331,11 +340,8 @@
     color: #ccc;
 }
 
-/*
-@media(max-width: 768px) {
-	.modal-footer button.btn {
-		text-align: center;
-		margin-top: 30px;
-		width: 100px;
-	}
-}*/
+.modal-footer button.btn {
+	text-align: center;
+	margin-top: 10px;
+	width: 190px;
+}
