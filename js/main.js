@@ -53,11 +53,16 @@ window.onload = function() {
 	videos = document.getElementsByTagName("video");
 	for(var i = 1; i < videos.length; i++) {
 		videos[i].volume = 0;
+		videos[i].pause();
 	}
 
 	// current and next item
 	var currentItem;
 	var nextItem;
+
+	// volume handler
+	var upVolumeHandler = null;
+	var downVolumeHandler = null;
 
 	// this function is called when a slide is starting to move.
 	$('#carousel-generic').on("slide.bs.carousel", function(e){
@@ -67,14 +72,13 @@ window.onload = function() {
 		// play next video
 		nextItem.children[0].play();
 
-		// volume handler
-		var upVolumeHandler = null;
-		var downVolumeHandler = null;
-
 		// if previous video is running, clear it
 		if(downVolumeHandler) {
-			clearInterval(downVolumeHandler);
+			clearInterval(downVolumeHandler.handler);
 			downVolumeHandler.video.volume = 0;
+		}
+		if(upVolumeHandler) {
+			clearInterval(upVolumeHandler.handler);
 		}
 
 		// function to remember previous handler
@@ -93,6 +97,7 @@ window.onload = function() {
 			if(video.volume >= 0.9) {
 				video.volume = 1;
 				clearInterval(upVolumeHandler.handler);
+				upVolumeHandler = null;
 			} else {
 				video.volume += 0.01;
 			}
@@ -102,6 +107,7 @@ window.onload = function() {
 			if(video.volume <= 0.1) {
 				video.volume = 0;
 				clearInterval(downVolumeHandler.handler);
+				downVolumeHandler = null;
 			} else {
 				video.volume -= 0.01;
 			}
